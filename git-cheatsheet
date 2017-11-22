@@ -1,0 +1,62 @@
+Configuring a remote for a fork
+===============================
+git remote -v
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git remote -v
+
+Syncing a fork
+==============
+git fetch upstream
+git checkout master
+git merge upstream/master
+
+Checkout remote-tracking branch
+===============================
+git branch -r
+git checkout -b local-branchname remote/branchname
+
+Delete a remote branch
+======================
+git push remotename :branchname
+
+Interactive Rebase
+==================
+git rebase -i HEAD^
+or
+git rebase -i HEAD~<number-of-commits>
+
+Uncommit into the working directory
+===================================
+git reset HEAD^
+or
+git reset HEAD~<number-of-commits>
+
+Erase changes in working directory
+==================================
+git reset --hard HEAD
+
+Stash commands
+==============
+git stash save
+git stash apply
+git stash list
+git stash show
+git stash branch branchname stash@{#}
+git stash pop
+git stash drop
+git stash clear
+
+Stash save options
+==================
+--keep-index        "save all but the staging area
+--include-untracked "self-explanatory
+
+Submodules
+==========
+git submodule add <git@example.com:repositoryname.git>
+git submodule init
+
+git submodule update
+then run
+git checkout branchname
+in the submodule
