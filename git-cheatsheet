@@ -37,7 +37,7 @@ git reset --hard HEAD
 
 Stash commands
 ==============
-git stash save
+git stash push
 git stash apply
 git stash list
 git stash show
@@ -46,9 +46,9 @@ git stash pop
 git stash drop
 git stash clear
 
-Stash save options
+Stash push options
 ==================
---keep-index        "save all but the staging area
+--keep-index        "push all but the staging area
 --include-untracked "self-explanatory
 
 Submodules
